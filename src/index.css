@@ -1,0 +1,88 @@
+.divDark {
+  background-color: #102540;
+}
+
+.textDark {
+  color: white;
+}
+
+.textWhite {
+  color: black;
+}
+
+.container {
+  height: auto;
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.containerExpand {
+  height: auto;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.text {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 8px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.title {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 16px;
+  font-size: 24px;
+  text-align: left;
+}
+
+.aButton {
+  margin-left: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.containerProgress {
+  height: 20px;
+  width: 90%;
+  background-color: rgb(224, 224, 222);
+  margin: auto;
+}
+
+.roundContainerProgress {
+  border-radius: 50px;
+}
+
+.roundProgress {
+  border-radius: inherit;
+}
+
+.progressGreenToRed {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #5db75d, #efad4f, #d95551);
+  text-align: right;
+}
+
+.progressRedToGreen {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #d95551, #efad4f, #5db75d);
+  text-align: right;
+}
+
+.roundShowProgress {
+  border-radius: 0 50px 50px 0;
+}
+
+.showProgress {
+  height: 100%;
+  float: right;
+  background-color: rgb(224, 224, 222);
+  margin-right: -2px;
+}
