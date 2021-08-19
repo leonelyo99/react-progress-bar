@@ -1,6 +1,6 @@
 {
   "name": "green-red-react-progress-bar",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "It is a progress bar to reactivate which can go from green to red or from red to green. Its background colors and size can also be modified.",
   "main": "build/index.js",
   "scripts": {
