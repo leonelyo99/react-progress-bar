@@ -1,4 +1,4 @@
-## react-progress-bar
+## green-red-react-progress-bar
 
 It is a library of react, in short, a progress bar.
 
@@ -11,6 +11,11 @@ It is a library of react, in short, a progress bar.
 - It can may or may not include button.
 - It can may or may not include description.
 - It can be with rounded or straight edges.
+
+## To install
+```sh
+npm install --save green-red-react-progress-bar
+```
 
 ## Parameters
 
@@ -36,3 +41,23 @@ The following parameters can be passed to it.
 | titleButton | the text button | string | -
 | descriptionText | the description text | string | -
 | percentage | the percentage | number | 0
+
+## Ej:
+
+```{javascript}
+import ProgressBar from "green-red-react-progress-bar";
+
+<ProgressBar
+    darkTheam={true}
+    expand={true}
+    titleText={`This is the title`}
+    showButton={true}
+    titleButton={'Shoot the action'}
+    descriptionText={`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et sem magna. Donec in mauris vel eros commodo lacinia in vel dui. Phasellus velit quam, mollis et commodo nec`}
+    handleButton={()=>{console.log('click')}}
+    percentage={30}
+/>
+```
+
+## GitHub
+### [https://github.com/leonelyo99/react-progress-bar](https://github.com/leonelyo99/react-progress-bar)

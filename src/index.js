@@ -38,7 +38,7 @@ const ProgressBar = ({
           style={titleStyle}
         >
           {titleText}
-          {!!showButton && !!titleButton && !!link && (
+          {!!showButton && !!titleButton && !!handleButton && (
             <a
               className={`aButton ${
                 !!darkTheam ? 'textDark' : 'textWhite'
