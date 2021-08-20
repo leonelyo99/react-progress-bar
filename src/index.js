@@ -22,7 +22,6 @@ const ProgressBar = ({
   descriptionText,
   percentage,
 }) => {
-
   return (
     <div
       className={`${!!darkTheam && 'divDark'} ${
@@ -30,27 +29,25 @@ const ProgressBar = ({
       } ${containerClass}`}
       style={containerStyle}
     >
-      {!!titleText && (
-        <p
-          className={`title ${
-            !!darkTheam ? 'textDark' : 'textWhite'
-          } ${titleClass}`}
-          style={titleStyle}
-        >
-          {titleText}
-          {!!showButton && !!titleButton && !!handleButton && (
-            <a
-              className={`aButton ${
-                !!darkTheam ? 'textDark' : 'textWhite'
-              } ${buttonClass}`}
-              style={buttonStyle}
-              onClick={handleButton}
-            >
-              {titleButton}
-            </a>
-          )}
-        </p>
-      )}
+      <p
+        className={`title ${
+          !!darkTheam ? 'textDark' : 'textWhite'
+        } ${titleClass}`}
+        style={titleStyle}
+      >
+        {!!titleText && titleText}
+        {!!showButton && !!titleButton && !!handleButton && (
+          <a
+            className={`aButton ${
+              !!darkTheam ? 'textDark' : 'textWhite'
+            } ${buttonClass}`}
+            style={buttonStyle}
+            onClick={handleButton}
+          >
+            {titleButton}
+          </a>
+        )}
+      </p>
       {!!descriptionText && (
         <p
           className={`text ${
@@ -119,7 +116,7 @@ ProgressBar.defaultProps = {
   buttonStyle: {},
   descriptionClass: '',
   descriptionStyle: {},
-  handleButton: ()=>{},
+  handleButton: () => {},
   showButton: false,
   titleText: null,
   titleButton: null,
