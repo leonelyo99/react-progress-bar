@@ -24,7 +24,7 @@ The following parameters can be passed to it.
 | PARAMETERS | ACTION | TYPE | DEFAULT
 | ------ | ------ | ------ | ------ |
 | darkTheam | set dark theme | boolean | false
-| expand | set dark mode | boolean | false
+| expand | set expand mode | boolean | false
 | redToGreen | set red to green progress bar | boolean | false
 | roundProgressbar | set round progressbar | boolean | true
 | containerClass | pass a class to container | string | -
