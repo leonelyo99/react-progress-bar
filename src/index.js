@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './index.css';
+import React from "react";
+import PropTypes from "prop-types";
+import "./index.css";
 
 const ProgressBar = ({
   darkTheam,
@@ -24,54 +24,59 @@ const ProgressBar = ({
 }) => {
   return (
     <div
-      className={`${!!darkTheam && 'divDark'} ${
-        !!expand ? 'containerExpand' : 'container'
+      className={`${!!darkTheam && "divDark"} ${
+        !!expand ? "containerExpand" : "container"
       } ${containerClass}`}
       style={containerStyle}
     >
-      <p
-        className={`title ${
-          !!darkTheam ? 'textDark' : 'textWhite'
-        } ${titleClass}`}
-        style={titleStyle}
-      >
-        {!!titleText && titleText}
-        {!!showButton && !!titleButton && !!handleButton && (
-          <a
-            className={`aButton ${
-              !!darkTheam ? 'textDark' : 'textWhite'
-            } ${buttonClass}`}
-            style={buttonStyle}
-            onClick={handleButton}
-          >
-            {titleButton}
-          </a>
-        )}
-      </p>
+      {!titleText && !titleButton ? null : (
+        <p
+          className={`title ${
+            !!darkTheam ? "textDark" : "textWhite"
+          } ${titleClass}`}
+          style={titleStyle}
+          data-testid="progressBarTitle"
+        >
+          {!!titleText && titleText}
+          {!!showButton && !!titleButton && !!handleButton && (
+            <a
+              className={`aButton ${
+                !!darkTheam ? "textDark" : "textWhite"
+              } ${buttonClass}`}
+              style={buttonStyle}
+              onClick={handleButton}
+              data-testid="progressBarButton"
+            >
+              {titleButton}
+            </a>
+          )}
+        </p>
+      )}
       {!!descriptionText && (
         <p
           className={`text ${
-            !!darkTheam ? 'textDark' : 'textWhite'
+            !!darkTheam ? "textDark" : "textWhite"
           } ${descriptionClass}`}
           style={descriptionStyle}
+          data-testid="progressBarDescription"
         >
           {descriptionText}
         </p>
       )}
       <div
         className={`${
-          roundProgressbar && 'roundContainerProgress'
+          roundProgressbar && "roundContainerProgress"
         } containerProgress`}
       >
         {!!percentage ? (
           <div
             className={`${
-              !!redToGreen ? 'progressRedToGreen' : 'progressGreenToRed'
-            } ${roundProgressbar && 'roundProgress'}`}
+              !!redToGreen ? "progressRedToGreen" : "progressGreenToRed"
+            } ${roundProgressbar && "roundProgress"}`}
           >
             <div
               className={`showProgress ${
-                roundProgressbar && 'roundShowProgress'
+                roundProgressbar && "roundShowProgress"
               }`}
               style={{ width: `${!!percentage ? 100 - percentage : 100}%` }}
             ></div>
@@ -108,13 +113,13 @@ ProgressBar.defaultProps = {
   expand: false,
   redToGreen: false,
   roundProgressbar: true,
-  containerClass: '',
+  containerClass: "",
   containerStyle: {},
-  titleClass: '',
+  titleClass: "",
   titleStyle: {},
-  buttonClass: '',
+  buttonClass: "",
   buttonStyle: {},
-  descriptionClass: '',
+  descriptionClass: "",
   descriptionStyle: {},
   handleButton: () => {},
   showButton: false,
